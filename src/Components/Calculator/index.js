@@ -110,7 +110,7 @@ export const Calculator = () => {
 
       setLastOperator(value);
     }
-
+    // add dot method to the script
     if (value === ".") {
       const lastChar = displayValue.slice(-1);
       const lastIndexOfOp = displayValue.lastIndexOf(lastOperator);
