@@ -113,9 +113,11 @@ export const Calculator = () => {
 
     if (value === ".") {
       const lastChar = displayValue.slice(-1);
-      if (operator.includes(lastChar)) return;
       const lastIndexOfOp = displayValue.lastIndexOf(lastOperator);
-      const tempString = displayValue.slice(lastOperator);
+      const tempString = displayValue.slice(lastIndexOfOp);
+      console.log(tempString);
+      if (operator.includes(lastChar)) return;
+
       if (tempString.includes(".")) return;
     }
     return setDisplayValue(displayValue + value);
